@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<main class="home">
+  <!-- Header -->
+  <h1>{{ site.title }}</h1>
+  <nav>
+    <a href="/">Home</a> | 
+    <a href="/about">About</a>
+  </nav>
+
+  <!-- Posts List -->
+  <section class="posts">
+    <h2>📌 HAHA</h2>
+    {% for post in site.posts %}
+    <article class="post-item">
+      <time>{{ post.date | date: "%b %d, %Y" }}</time>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="subtitle">{{ post.subtitle }}    
+      {% if post.logo %}
+        <img src="{{ '/images/post-logos/' | relative_url }}{{ post.logo }}"  
+            class="post-logo">
+        {% endif %} 
+      </p>
+    </article>
+    {% endfor %}
+  </section>
+
+  <!-- Footer -->
+  <!--{% include footer.html %}-->
+</main>

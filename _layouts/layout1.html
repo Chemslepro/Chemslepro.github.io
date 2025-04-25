@@ -1,0 +1,181 @@
+---
+layout: layout1
+---
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  
+<!-- _layouts/terminal.html -->
+<style>
+
+
+.terminal {
+  background-color: #1a1a1a;
+  color: #caceca;
+  font-family: 'Courier New', monospace;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,255,0,0.1);
+}
+
+.content-container {
+  max-width: 1000px;
+  padding: 2rem;
+}
+
+.terminal-header {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-title {
+  color: #c773e3;
+  margin: 0;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  margin-right: 0.5rem;
+}
+
+.terminal-content {
+  line-height: 1.6;
+}
+
+.terminal-command {
+  color: #00ff00;
+  margin: 1rem 0;
+}
+
+.terminal-command::before {
+  content: "> ";
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+
+
+
+
+.crt-screen {
+  background: #3e3d3e;
+  width: 100%;
+  height: 2vh;
+  margin: 2rem auto;
+  border: 3px solid #444;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,255,136,0.1);
+}
+
+.grid-lines {
+  background-image: 
+    linear-gradient(to right, #002200 1px, transparent 1px),
+    linear-gradient(to bottom, #002200 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.waveform {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: sweep 3s linear infinite;
+}
+
+.signal {
+  stroke: var(--oszi-green);
+  stroke-width: 2;
+  fill: none;
+  filter: drop-shadow(0 0 4px var(--oszi-green));
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes signal {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(1.5); }
+  100% { transform: scaleY(1); }
+}
+</style>
+
+<article class="terminal">
+  <div class="content-container">
+    <div class="terminal-header">
+      <header>
+        <h1 class="terminal-title">{{ page.title }} ICI</h1>
+        <p class="subtitle">{{ page.subtitle }}</p>
+        <time>{{ page.date | date: "%B %d, %Y" }}</time>
+      </header>
+      <div class="terminal-controls">
+        <span style="color: #ff5555">●</span>
+        <span style="color: #ffb86c">●</span>
+        <span style="color: #50fa7b">●</span>
+      </div>
+    </div>
+
+    <div class="crt-screen">
+      <div class="grid-lines"></div>
+      <div class="screen-text">CH1 1V/div  20ms/div</div>
+      <svg class="waveform" viewBox="0 0 500 100" preserveAspectRatio="none">
+      <path class="signal" d="M0,50 Q100,10 200,90 Q300,10 400,50 Q500,90 500,50" />
+      </svg>
+    </div>
+
+
+    <div class="terminal-content">
+      
+      
+      <!-- Optional interactive prompt -->
+      <div class="terminal-command">
+        <span class="terminal-prompt">visitor@blog:~$</span> cat post_details.txt
+        <div class="terminal-output">
+          Author: {{ page.author | default: "Anonymous" }}<br>
+          Date: {{ page.date | date: "%Y-%m-%d %H:%M" }}
+        </div>
+      </div>
+      {{ content }}
+      <!-- Cursor for realism -->
+      <span class="cursor">_</span>
+    </div>
+  </div>
+</article>
+
+<script>
+// Add typing animation to code blocks
+document.querySelectorAll('code').forEach((block) => {
+  const text = block.textContent;
+  block.textContent = '';
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      block.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 20);
+    }
+  }
+  typeWriter();
+});
+</script>
