@@ -2,7 +2,7 @@
 title: "Premier post : test"
 subtitle: "Là on met une description et on fait en sorte que le petit perso soit à coté"
 logo: "perso1.jpg"
-layout: "layout2"
+layout: "layout1"
 author: "Chems"
 ---
 La mise en page, ou mise en pages, est l'opération de disposition graphique d'un contenu informationnel dans un espace donné (feuille de papier, planche de bande dessinée, pages web, etc.).

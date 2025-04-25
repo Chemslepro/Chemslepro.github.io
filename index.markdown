@@ -23,7 +23,7 @@ layout: default
   <article class="post">
     <time>{{ post.date | date: "%B %d, %Y" }}</time>
     {% if post.writer %}
-    <author-text>- written by {{ post.writer }}</author-text>
+    <author-text>- written by {{ post.author }}</author-text>
     {% endif %} 
     <h3>
     {% if post.logo %}

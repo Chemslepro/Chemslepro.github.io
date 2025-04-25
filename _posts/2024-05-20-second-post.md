@@ -1,9 +1,9 @@
 ---
-writer: "Chems"
+author: "Chems"
 title: "Ohlalala deuxième post ou quoi"
 subtitle: "Ceci est une description"
 logo: "perso1.jpg"
-layout: "layout4"
+layout: "layout5"
 ---
 
 ![Vanilluxe Animation]({{ '/images/vanilluxe.gif' | relative_url }})
