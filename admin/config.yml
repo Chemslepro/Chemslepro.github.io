@@ -2,7 +2,8 @@ backend:
   name: github
   repo: your-username/your-repo  # Format: username/repo-name
   branch: main  # Match your default branch
-  base_url: https://your-site.netlify.app  # Update after redeploying
+  base_url: https://deluxe-longma-5168a9.netlify.app  # Update after redeploying
+  
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 collections:
