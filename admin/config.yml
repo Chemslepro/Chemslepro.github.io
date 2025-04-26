@@ -1,23 +1,17 @@
 backend:
   name: github
-  repo: Chemslepro/Chemslepro.github.io
-  branch: main
-  #app_id: 05fa35a73f10ba5aeee1a4f3a5d9f77acf94b140 #Ov23liyzZbgOWWVfCusi 
-  base_url: https://chemslepro.github.io.netlify.app
-  
-media_folder: "images/uploads"
-public_folder: "images/uploads"
-
+  repo: your-username/your-repo  # Format: username/repo-name
+  branch: main  # Match your default branch
+  base_url: https://your-site.netlify.app  # Update after redeploying
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Post"
     folder: "_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Logo", name: "logo", widget: "image", required: false }
-      - { label: "Layout", name: "layout", widget: "string", default: "layout1" }
-      - { label: "Author", name: "author", widget: "string", default: "Chems" }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
