@@ -5,7 +5,7 @@ logo: "perso1.jpg"
 layout: "layout1"
 author: "Chems"
 ---
-La mise en page, ou mise en pages, est l'opération de disposition graphique d'un contenu informationnel dans un espace donné (feuille de papier, planche de bande dessinée, pages web, etc.).
+OK La mise en page, ou mise en pages, est l'opération de disposition graphique d'un contenu informationnel dans un espace donné (feuille de papier, planche de bande dessinée, pages web, etc.).
 
 Elle succède au travail de collecte et de composition du contenu (composition de texte « au kilomètre », collection des composants) et précède souvent le travail d'impression. Elle peut le précéder dans la mesure où elle est prédéfinie (dimensions des colonnes, styles du texte, placement des illustrations, etc.).
 
