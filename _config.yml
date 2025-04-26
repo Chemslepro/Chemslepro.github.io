@@ -43,6 +43,11 @@ defaults:
 
 include:
   - assets/images/uploads  
+
+cors:
+  allowed_origins:
+    - https://chemslepro.github.io
+    - http://localhost:4000
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

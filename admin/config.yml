@@ -2,6 +2,9 @@ backend:
   name: github
   repo: Chemslepro/Chemslepro.github.io
   branch: main
+  auth_type: implicit # Add this line
+  app_id: Ov23liyzZbgOWWVfCusi # From GitHub OAuth app
+
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
