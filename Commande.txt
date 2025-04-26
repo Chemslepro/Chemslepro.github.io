@@ -1,1 +1,5 @@
 bundle exec jekyll serve
+
+git add .
+git commit -m "Description"
+git push origin main

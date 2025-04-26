@@ -3,11 +3,10 @@ backend:
   repo: Chemslepro/Chemslepro.github.io
   branch: main
   auth_type: implicit
-  app_id: 14f76af27dddd3d0f7c430f5c3e05a91482f435d  # Replace with actual ID
-  base_url: https://chemslepro.github.io
+  app_id: Ov23liyzZbgOWWVfCusi # Will get this in Step 2
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+media_folder: "images/uploads"
+public_folder: "images/uploads"
 
 collections:
   - name: "posts"
@@ -18,6 +17,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Logo", name: "logo", widget: "image", required: false }
+      - { label: "Layout", name: "layout", widget: "string", options: ["layout1", "layout2", "layout3", "layout4", "layout5"], default: "layout1" }
+      - { label: "Author", name: "author", widget: "string", default: "Chems" }
       - { label: "Content", name: "body", widget: "markdown" }
