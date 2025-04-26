@@ -2,10 +2,8 @@ backend:
   name: github
   repo: Chemslepro/Chemslepro.github.io
   branch: main
-  auth_type: implicit
-  app_id: Ov23liyzZbgOWWVfCusi 
-  base_url: https://chemslepro.github.io
-
+  #app_id: 05fa35a73f10ba5aeee1a4f3a5d9f77acf94b140 #Ov23liyzZbgOWWVfCusi 
+  base_url: https://chemslepro.github.io.netlify.app
   
 media_folder: "images/uploads"
 public_folder: "images/uploads"
