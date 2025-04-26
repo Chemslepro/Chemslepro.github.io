@@ -3,7 +3,7 @@ backend:
   repo: Chemslepro/Chemslepro.github.io
   branch: main
   auth_type: implicit
-  app_id: Ov23liyzZbgOWWVfCusi # Will get this in Step 2
+  app_id: Ov23liyzZbgOWWVfCusi 
 
   
 media_folder: "images/uploads"
