@@ -4,7 +4,6 @@ backend:
   branch: main
   auth_type: implicit
   app_id: Ov23liyzZbgOWWVfCusi # Will get this in Step 2
-  base_url: https://chemslepro.github.io
 
   
 media_folder: "images/uploads"
