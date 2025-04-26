@@ -4,17 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    <!-- Add CSS to ensure the CMS container is visible -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
     <style>
-      #nc-root {
-        position: relative;
-        min-height: 100vh;
+      /* Critical CSS to ensure mounting works */
+      html, body, #nc-root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
   <body>
-    <!-- Add this container for the CMS -->
+    <!-- Required mounting element with EXACT ID -->
     <div id="nc-root"></div>
   </body>
 </html>
