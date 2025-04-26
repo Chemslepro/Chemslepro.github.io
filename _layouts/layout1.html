@@ -121,6 +121,13 @@ time {
   margin-left: 2rem;
 }
 
+.comments {
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
 
 </style>
 
@@ -181,3 +188,17 @@ document.querySelectorAll('code').forEach((block) => {
   typeWriter();
 });
 </script>
+
+
+<section class="comments">
+  <h3>Comments</h3>
+  <div id="cusdis_thread"
+    data-host="https://cusdis.com"
+    data-app-id="YOUR_APP_ID"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ site.url }}{{ page.url }}"
+    data-page-title="{{ page.title }}"
+    data-theme="auto">
+  </div>
+  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+</section>
