@@ -42,7 +42,7 @@ prose:
 
       - name: "logo"
         field:
-          element: "media"
+          element: "text"
           label: "L'image à afficher à coté du post"
 
 
