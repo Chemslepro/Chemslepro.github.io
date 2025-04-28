@@ -17,7 +17,7 @@ plugins:
 
 # _config.yml
 prose:
-  rooturl: '_posts'  # Default folder to open
+  #rooturl: '_posts'  # Default folder to open
   metadata:
     _posts:
       - name: "author"
