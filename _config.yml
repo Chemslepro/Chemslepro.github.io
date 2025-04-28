@@ -5,21 +5,10 @@ description: >-
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: ""
-url: "https://deluxe-longma-5168a9.netlify.app/" 
+url: "" 
 twitter_username: jekyllrb
 github_username: Chemslepro
 
 theme: minima
 plugins:
   - jekyll-feed
-
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-
-# ✅ Critical for Netlify CMS
-include:
-  - admin
