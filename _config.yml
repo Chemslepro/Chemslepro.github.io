@@ -12,3 +12,28 @@ github_username: Chemslepro
 theme: minima
 plugins:
   - jekyll-feed
+
+
+
+# _config.yml
+prose:
+  rooturl: '_posts'  # Default folder to open
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post Title"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "date"
+        field:
+          element: "datetime"
+          label: "Publication Date"
+  media: "assets/img"  # Folder for uploaded images
+  ignore:
+    - _site
+    - .gitignore
+    - README.md
