@@ -20,18 +20,33 @@ prose:
   rooturl: '_posts'  # Default folder to open
   metadata:
     _posts:
+      - name: "author"
+        field:
+          element: "text"
+          label: "Pseudo/Blaze"
+
       - name: "title"
         field:
           element: "text"
-          label: "Post Title"
+          label: "Titre du post"
+
+      - name: "subtitle"
+        field:
+          element: "text"
+          label: "La description"
+
       - name: "layout"
         field:
           element: "text"
-          label: "Layout chosen"
-      - name: "date"
+          label: "Quel layout ?"
+
+      - name: "logo"
         field:
-          element: "datetime"
-          label: "Publication Date"
+          element: "media"
+          label: "L'image à afficher à coté du post"
+
+
+      
   media: "assets/img"  # Folder for uploaded images
   ignore:
     - _site
