@@ -26,8 +26,8 @@ prose:
           label: "Post Title"
       - name: "layout"
         field:
-          element: "hidden"
-          value: "post"
+          element: "text"
+          label: "Layout chosen"
       - name: "date"
         field:
           element: "datetime"
