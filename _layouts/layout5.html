@@ -26,16 +26,9 @@ layout: layout5
 }
 
 .win98-container {
-  background: repeating-linear-gradient(
-    45deg,
-    var(--win-gray),
-    var(--win-gray) 10px,
-    #a0a0a0 10px,
-    #a0a0a0 20px
-  );
+  background-image: url("{{site.baseurl}}/assets/img/bz bz.jpeg");
   min-height: 100vh;
   padding: 2rem;
-  display: grid;
   place-items: center;
   font-family: 'MS Sans Serif', Arial, sans-serif;
 }
@@ -45,15 +38,15 @@ layout: layout5
   border: 3px solid;
   border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
   box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
-  max-width: 1500px;
-  width: 90%;
+  max-width: 800px;
+  width: 100%;
 }
 
 .title-bar {
   background: linear-gradient(
     to right,
-    var(--win-blue),
-    #1084d0
+    #330092,
+    #330092
   );
   padding: 4px 8px;
   display: flex;
@@ -69,7 +62,7 @@ layout: layout5
   display: inline-block;
   width: 18px;
   height: 16px;
-  background: var(--win-gray);
+  background: #c0c0c0;
   border: 2px solid;
   border-color: var(--win-white) var(--win-dark-gray) var(--win-dark-gray) var(--win-white);
   margin-left: 4px;
@@ -81,10 +74,8 @@ layout: layout5
 
 .menu-bar {
   background: var(--win-gray);
-  padding: 4px 8px;
-  border-bottom: 2px solid var(--win-dark-gray);
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -189,10 +180,14 @@ layout: layout5
 }
 
  
-  .retro-header-img {
-    width: 100px;
-    max-width: 100%;
-    height: auto;
+.retro-header-img {
+  width: 70px;
+  max-width: 100%;
+  height: auto;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
 }
 
 </style>
@@ -244,9 +239,7 @@ layout: layout5
 
         {{ content }}
 
-        <div class="canvas-footer">
-          For Help, click Help Topics on the Help Menu.
-        </div>
+        <span class="cursor">_</span>
       </div>
     </div>
   </div>
@@ -281,4 +274,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
 </script>
